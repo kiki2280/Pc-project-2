@@ -471,6 +471,7 @@ progress::-moz-progress-value {
 }
 
 .command__title {
+    display: flex;
     margin-bottom: 11.3rem;
 }
 
@@ -571,6 +572,7 @@ progress::-moz-progress-value {
     padding: 9rem 9.5rem;
     background: #2C2C2C;
     text-align: center;
+    position: relative;
 }
 
 .modal__header {
@@ -611,6 +613,10 @@ progress::-moz-progress-value {
     margin-bottom: 1.6rem;
 }
 
+.modal__input::placeholder {
+    color: #b2a7a7;
+}
+
 .modal__elements {
     width: 45rem;
     margin: 0 auto;
@@ -624,6 +630,15 @@ progress::-moz-progress-value {
 
 .active {
     display: flex;
+}
+
+.modal__close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 5rem;
+    height: 5rem;
+    cursor: pointer;
 }
 
 .noscroll {

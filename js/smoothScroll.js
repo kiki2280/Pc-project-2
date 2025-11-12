@@ -1,17 +1,22 @@
-const links = document.querySelectorAll('.header__nav a');
+const smoothScroll = () => {
+    const links = document.querySelectorAll('.header__nav a');
 
-links.forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
+    links.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
 
-        const section = document.querySelector(link.getAttribute('href'));
+            const section = document.querySelector(link.getAttribute('href'));
 
-        if (section) {
-            seamless.scrollIntoView(section, {
-                behavior: "smooth",
-                block: "start",
-                inline: "center",
-            });
-        }
+            if (section) {
+                seamless.scrollIntoView(section, {
+                    behavior: "smooth",
+                    block: "start",
+                    inline: "center",
+                });
+            }
+        });
     });
-});
+
+}
+
+smoothScroll();  // вызов функции плавного скролла
